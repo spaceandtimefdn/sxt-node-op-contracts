@@ -1,0 +1,11 @@
+{
+    "attestors": [
+        "0x813D6aF4222a6b8ea3237F3A9EB7a9d58ade2ACE",
+        "0x8c2b9f40a674CA91F8ac5Ff30eB17b80D768f209",
+        "0xE7c9f4d5B48920F6E561b4889bB9beF9874C57e0"
+    ],
+    "threshold": 2,
+    "tokenAddress": "0xdb5ffd69fa8022e20cf7d66c36c961a2949f4da0",
+    "unbondingPeriod": 604800,
+    "stakingPoolOwner": "0xd341DF0d9335e55a095912f7f76Ed5289e64e4C6"
+}

@@ -1,0 +1,33 @@
+[profile.default]
+src = "src"
+libs = ["dependencies"]
+evm_version = 'cancun'
+solc = "0.8.28"
+ffi = true
+ast = true
+build_info = true
+extra_output = ["storageLayout"]
+fs_permissions = [{ access = "read-write", path = "./" }]
+optimizer = true
+optimizer_runs = 2000
+no_match_coverage = "(.*TokenSplitter\\.sol|script/.*|test/mocks/.*)"
+
+remappings = [
+    "@openzeppelin/contracts/=dependencies/@openzeppelin-contracts-5.2.0/",
+    "forge-std/=dependencies/forge-std-1.9.6/src/",
+]
+
+[dependencies]
+
+forge-std = "1.9.6"
+"@openzeppelin-contracts" = "5.2.0"
+
+
+[rpc_endpoints]
+local = "http://127.0.0.1:8545"
+sepolia = "${ETH_RPC_URL}"
+mainnet = "${ETH_RPC_URL}"
+
+[etherscan]
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
+sepolia = { key = "${ETHERSCAN_API_KEY}" }

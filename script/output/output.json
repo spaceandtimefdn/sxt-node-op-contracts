@@ -1,0 +1,15 @@
+{
+  "deployedContracts": {
+    "SubstrateSignatureValidator": "0xe02c182ab9dc730989c0958d841238a379f0eb66",
+    "StakingPool": "0x52550f779dc42f0e1711d1de5639bac6fff203a8",
+    "Staking": "0x2fc562b02c9c0a2dfa814d807ff92b3f99468e10",
+    "SXTChainMessaging": "0x82840556980bfbcc08e3e7c61aa44e1a4eab5471"
+  },
+  "deploymentConfig": {
+    "tokenAddress": "0xdb5ffd69fa8022e20cf7d66c36c961a2949f4da0",
+    "stakingPoolOwner": "0xd341df0d9335e55a095912f7f76ed5289e64e4c6",
+    "unbondingPeriod": 604800,
+    "threshold": 2,
+    "attestorsCount": 3
+  }
+}
