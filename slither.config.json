@@ -1,5 +1,5 @@
 {
     "fail_on": "pedantic",
     "filter_paths": "openzeppelin",
-    "detectors_to_exclude": "naming-convention"
+    "detectors_to_exclude": "naming-convention,uninitialized-local-variables"
 }

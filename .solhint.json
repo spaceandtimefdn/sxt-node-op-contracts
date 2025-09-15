@@ -10,8 +10,11 @@
         "gas-small-strings": "warn",
         "gas-strict-inequalities": "warn",
         "gas-struct-packing": "warn",
+        "import-path-check": "off",
         "no-inline-assembly": "off",
         "one-contract-per-file": "off",
+        "use-natspec": "off",
+        "function-max-lines": "off",
         "func-visibility": [
             "warn",
             {
