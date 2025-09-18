@@ -171,6 +171,26 @@ contract StakingTest is Test {
         staking.nominate(ed25519PubKeys);
     }
 
+    function testNominateValidSingleNode() public {
+        bytes32[] memory nodes = new bytes32[](1);
+        nodes[0] = bytes32(uint256(1));
+
+        vm.expectEmit(true, true, true, true);
+        emit IStaking.Nominated(nodes, address(this));
+        staking.nominate(nodes);
+    }
+
+    function testNominateValidSortedNodes() public {
+        bytes32[] memory nodes = new bytes32[](3);
+        nodes[0] = bytes32(uint256(1));
+        nodes[1] = bytes32(uint256(2));
+        nodes[2] = bytes32(uint256(3));
+
+        vm.expectEmit(true, true, true, true);
+        emit IStaking.Nominated(nodes, address(this));
+        staking.nominate(nodes);
+    }
+
     function testFuzzNominate(bytes32[] memory nodes) public {
         if (nodes.length == 0) {
             vm.expectRevert(Staking.EmptyNodesList.selector);

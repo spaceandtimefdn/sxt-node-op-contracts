@@ -46,7 +46,7 @@ contract Deploy is Script {
 
         vm.startBroadcast();
 
-        SXTChainMessaging sxtChainMessaging = new SXTChainMessaging();
+        SXTChainMessaging sxtChainMessaging = new SXTChainMessaging(config.tokenAddress);
         console.log("SXTChainMessaging deployed at:", address(sxtChainMessaging));
 
         // Deploy SubstrateSignatureValidator
